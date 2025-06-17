@@ -15,7 +15,7 @@ const Login = () => {
         const API_URL =
   import.meta.env.MODE === "development"
     ? "/api/auth/login/"
-    : "http://82.112.234.104:8001/api/auth/login/";
+    : "https://your-render-backend.onrender.com/api/auth/login";
 
 
 
@@ -24,6 +24,7 @@ const Login = () => {
         email,
         password,
       });
+      console.log(res.data);
 
       setMessage("Login successful!");
       console.log("Token:", res.data.refresh);
